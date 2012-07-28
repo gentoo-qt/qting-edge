@@ -1,63 +1,16 @@
-Welcome to the qt overlay!
-==========================
+DEPRECATION NOTICE
+==================
 
-This is where the Gentoo Qt team develops and maintains ebuilds for
-experimental Qt4 versions (pre-releases and "live" code from git or svn) and
-Qt4 related packages. For your convenience we provide some sets and
-``package.keyword`` files.
+The Gentoo Qt team has moved the qting-edge overlay to a new name and
+location. Please do not use this overlay anymore, and use the "qt"
+overlay instead.
 
-Please note that we use the following versioning scheme:
+If you use layman, do `layman -d qting-edge; layman -a qt` to move to
+our new overlay.
 
-- 4.x.y_beta, 4.x.y_rc are official pre-releases.
-- 4.x.9999[-kde-qt] is "live" code from Nokia's Qt Software git repository.
-        - 4.x.9999[stable-branch] is cloning the Nokia's stable-branch tree. 
-        This code is consider stable enough for everyday usage but it gets 
-        bumped quite rarely.
-        - 4.x.9999[-stable-branch] is cloning the Nokia's master tree. 
-        This code is highly experimental and gets a lot of daily updates.                
-- 4.6.9999[kde-qt] is "live" code from KDE's kde-qt git repository.
+The new overlay can also be browsed through the following web frontends:
 
-The corresponding sets we define are:
+https://gitorious.org/gentoo-qt/qt
+http://git.overlays.gentoo.org/gitweb/?p=proj/qt.git;a=summary
 
-qt-all-4.7
-	the latest official pre-release.
-qt-all-{,4.6,4.7}-live-nokia
-	"live" code from Nokia's Qt Software git repo.
-qt-all-live-kde
-	"live" code from KDE's kde-qt git repo.
-
-If you want to use kde-qt, you should mask the official pre-releases.
-
-Even though we are trying to do our best regarding that build status 
-of live Qt packages, they may not work all the time. You might want to consult 
-our automatically generated page which lists the status of all Qt live ebuilds
-http://dev.gentoo.org/~hwoarang/qt/qt4-live-status.html
-
-You don't need to emerge the Qt ebuilds specifically, they are normally pulled
-in as dependencies for packages that use Qt4. But you may want to have all of
-Qt4 installed, for example if you are a developer or tester. In that case we
-recommend you copy the most applicable set to your ``/etc/portage/sets/``
-directory, rename it (to prevent portage error on set redefinition), and
-customize it to your own wishes.
-
-KDE users should note that at this point they need to use the
-media-libs/phonon package instead of x11-libs/qt-phonon. As a result we have
-commented out qt-phonon in the qt-all-live-kde set. Apart from that, KDE can
-use the official Nokia Qt version, but has specific patches in kde-qt that
-should result in a smoother KDE user experience.
-
-Non-KDE users should stick to the official Qt packages from Nokia Qt Software
-(previously Trolltech).
-
-If you have questions, you can find us on IRC in #gentoo-qt on Freenode or at
-qt@gentoo.org.
-
-Bugs should be reported on https://bugs.gentoo.org. Be sure to include
-[qt overlay] in the summary of your bug report.
-
-Users wanting to contribute should first read the `Qt4 ebuild guide
-<http://www.gentoo.org/proj/en/desktop/qt/qt4-based-ebuild-howto.xml>`_.
-
-Happy Qting!
-
-The Gentoo Qt team
+See you there!
